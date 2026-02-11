@@ -1,44 +1,36 @@
-body {
-margin: 0;
-min-height: 100vh;
-background: #0f172a;
-font-family: Arial, sans-serif;
-color: #fff;
+
+body { 
+  margin: 0; 
+  overflow: hidden; 
+  background: #111; 
+  /* Apply the font globally */
+  font-family: 'ByteBounce', Arial, sans-serif; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-/* Header */
-.game-header {
-background: #020617;
-padding: 10px;
-text-align: center;
-box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+
+/* Ensure the value numbers look good in the new font */
+.card .value { 
+  color: white; 
+  font-size: 32px; /* Adjusted size as pixel fonts can appear smaller */
+  font-weight: normal; 
 }
-.game-header h1 {
-margin: 0;
-font-size: 1.4rem;
-letter-spacing: 0.5px;
+
+.game-header h1 { 
+  margin: 0; 
+  color: white; 
+  font-size: 48px; 
+  letter-spacing: 2px;
 }
-/* HUD */
-.hud {
-display: flex;
-gap: 16px;
-justify-content: center;
-margin-top: 24px;
-}
-/* Cards */
-.card {
-background: #020617;
-padding: 16px 24px;
-border-radius: 12px;
-text-align: center;
-min-width: 140px;
-box-shadow: 0 6px 18px rgba(0,0,0,0.5);
-}
-.label {
-font-size: 0.9rem;
-opacity: 0.8;
-margin-bottom: 4px;
-}
-.value {
-font-size: 2.2rem;
-font-weight: bold;
+
+canvas { 
+  display: block; 
+  flex-grow: 1; 
+  background: #222; 
+  /* This keeps the pixels sharp across all browsers */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
