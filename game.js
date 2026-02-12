@@ -38,7 +38,7 @@ let highScore = localStorage.getItem("sheepSlayerHighScore") || 0;
 
 // Reload system
 let lastShotTime = 0;
-const reloadTime = 300; 
+const reloadTime = 400; 
 
 // --- RESIZE ---
 function resize() {
