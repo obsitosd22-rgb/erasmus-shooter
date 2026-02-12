@@ -27,7 +27,7 @@ body {
 canvas { 
   display: block; 
   flex-grow: 1; 
-  background: #222; 
+  background: url('images/background.png') no-repeat center center;
   /* This keeps the pixels sharp across all browsers */
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
