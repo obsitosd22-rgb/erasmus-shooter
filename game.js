@@ -85,6 +85,29 @@ window.addEventListener("click", () => {
     }
 });
 
+window.addEventListener("keydown", e => {
+    if (e.code === "Space") {
+        if (gameOver || !gameRunning) return;
+
+    const now = Date.now();
+    if (now - lastShotTime >= reloadTime) {
+        bullets.push({
+            x: center.x,
+            y: center.y,
+            dx: Math.cos(angle) * 12,
+            dy: Math.sin(angle) * 12,
+            r: 6
+        });
+
+        shootSound.currentTime = 0;
+        shootSound.play();
+
+        lastShotTime = now;
+    }
+    }
+}
+);
+
 // --- SPAWN LOGIC ---
 function spawnEnemy() {
     if (gameOver || !gameRunning) return;
